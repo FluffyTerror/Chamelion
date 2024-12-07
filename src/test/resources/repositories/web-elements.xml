@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pages xmlns="http://chameleon.ibs-qa.ru/schema/web-elements">
+    <Page name="Главная страница">
+        <Button name="Песочница" locator=' //li[@class = "nav-item dropdown"]' isLoaded=" true "/>
+        <Button name="Товары" isLoaded="false" locator="//a[@href ='/food']"/>
+        <Button name="Сброс" locator="//a[@id ='reset']"/>
+    </Page>
+    <Page name="Страница товаров">
+        <Button locator="//button[@data-toggle ='modal']" name="Добавить"/>
+        <Button name="Песочница" locator=' //li[@class = "nav-item dropdown"]' isLoaded=" true "/>
+        <Button name="Сброс" locator="//a[@id ='reset']"/>
+    </Page>
+    <Page name="Страница добавления" locator="//h5[@id ='editModalLabel']" waitTimeOut="1">
+        <TextInput name="Наименование" locator="//input[@id ='name']" isLoaded="true" waitTimeOut="1"/>
+        <ComboBox name="Тип" locator="//select[@id ='type']" isLoaded="false" waitTimeOut="1"/>
+        <CheckBox name="Экзотический" locator="//input[@id ='exotic']" isLoaded="false" waitTimeOut="1"/>
+        <Button name="Сохранить" locator="//button[@id ='save']" isLoaded="true" waitTimeOut="1000"/>
+        <Button name="Овощ" locator='//*[@id="type"]/option[1]' isLoaded="false"/>
+        <Button name="Фрукт" locator='//*[@id="type"]/option[2]' isLoaded="false"/>
+    </Page>
+</Pages>
